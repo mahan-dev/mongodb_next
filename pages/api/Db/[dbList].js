@@ -1,5 +1,5 @@
 
-import connectStatus from "../../../helper/connectStatus";
+import ConnectionDb from "../../../helper/ConnectionDb";
 import User from "../../../models/User";
 import UserSchema from "../../../models/UserSchema";
 
@@ -13,7 +13,7 @@ const handler = async (req, res) => {
   const delete_ = req.method === "DELETE";
   try {
 
-    await connectStatus(res);
+    await ConnectionDb(res)
   } catch(error) {
     console.log("error for connecting db", error)
     res.status(500).json({status: "Failure", message:"cannot connect to db"})
