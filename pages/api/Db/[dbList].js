@@ -1,6 +1,5 @@
 
 import ConnectionDb from "../../../helper/ConnectionDb";
-import User from "../../../models/User";
 import UserSchema from "../../../models/UserSchema";
 
 
@@ -21,7 +20,7 @@ const handler = async (req, res) => {
   }
   if (get) {
     try {
-      const userData = await User.findById(id);
+      const userData = await UserSchema.findById(id);
       res.status(200).json({ status: "success", data: userData });
     } catch (error) {
       console.log(error);
