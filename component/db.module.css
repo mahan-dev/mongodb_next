@@ -1,0 +1,151 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+
+}
+
+.container>h3:first-child {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.container h3 {
+    width: fit-content;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 1.4rem;
+    border-bottom: 3px #ccc dashed;
+}
+
+.input_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 350px;
+}
+
+.input_container>input {
+    width: fit-content;
+    outline: none;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.input_container>input:focus {
+    outline: #afafaf dotted;
+    border-style: dotted;
+}
+
+.input_container label {
+    cursor: pointer;
+}
+
+.input_container:last-child {
+    margin-bottom: 0;
+}
+
+.container_fields {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 3rem 0;
+    justify-content: center;
+
+}
+
+.container_fields button {
+    width: fit-content;
+    margin-top: 1rem;
+    align-self: flex-end;
+    background: #5edb80;
+    color: white;
+    cursor: pointer;
+    padding: 0.3rem;
+    transition: 0.4s ease;
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    -ms-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+}
+
+.container_fields button:hover {
+    background: #0da536;
+}
+
+.card_container {
+    width: fit-content;
+    margin: 1rem auto 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.db_card {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    background: #f1f1f1;
+    border: 1px #ccc dashed;
+    width: 500px;
+    max-width: 500px;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+}
+
+.card_info {
+    flex-grow: 1;
+    overflow-wrap: anywhere;
+
+}
+
+.card_info span {
+    color: red;
+}
+
+.card_tools {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    gap: 0.8rem;
+}
+
+.card_tools>span {
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 576px) {
+
+    .card_container,
+    .db_card {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .input_container {
+        width: auto;
+        gap: 1rem;
+        font-size: 1.2rem;
+    }
+}
